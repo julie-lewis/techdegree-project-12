@@ -7,7 +7,7 @@ $(document).ready(()=>{
 const project = [
   {
   	index: 0,
-    thumb : 'images/portfolio-1.png',
+    thumb : 'images/thumb1.jpg',
     image : 'images/portfolio-1.png',
     title : 'Styled Sign Up Form',
     description : 'Styled Sign Up Form',
@@ -17,7 +17,7 @@ const project = [
   },
   {
   	index: 1,
-    thumb : 'images/portfolio-2.png',
+    thumb : 'images/thumb2.jpg',
     image : 'images/portfolio-2.png',
     title : 'SVG Animations',
     description : 'SVG Animations',
@@ -27,7 +27,7 @@ const project = [
   },
   {
   	index: 2,
-    thumb : 'images/portfolio-3.png',
+    thumb : 'images/thumb3.jpg',
     image : 'images/portfolio-3.png',
     title : 'SASS Style Guide',
     description : 'SASS Style Guide',
@@ -37,7 +37,7 @@ const project = [
   },
   {
   	index: 3,
-    thumb : 'images/portfolio-4.png',
+    thumb : 'images/thumb4.jpg',
     image : 'images/portfolio-4.png',
     title : 'JavaScript Guessing Game',
     description : 'Wheel of Success',
@@ -47,7 +47,7 @@ const project = [
   },
   {
   	index: 4,
-    thumb : 'images/portfolio-5.png',
+    thumb : 'images/thumb5.jpg',
     image : 'images/portfolio-5.png',
     title : 'Employee Directory',
     description : 'Accessed RandomUserGenerator API to create Employee Directory',
@@ -57,7 +57,7 @@ const project = [
   },
   {
   	index: 5,
-    thumb : 'images/portfolio-6.png',
+    thumb : 'images/thumb6.jpg',
     image : 'images/portfolio-6.png',
     title : 'REACT Flickr Gallery',
     description : 'Used Flickr API to develop a searchable Gallery using the REACT.js library',
@@ -67,31 +67,31 @@ const project = [
   },
   {
   	index: 6,
-    thumb : 'images/portfolio-1.png',
+    thumb : 'images/thumb7.jpg',
     image : 'images/portfolio-1.png',
     title : 'Dubzz Digital Marketing',
     description : 'Worked with a team to design, develop and implement a re-designed company website',
-    link: 'https://julie-lewis.github.io/techdegree-project-1/',
+    link: 'https://dubzz.co.nz/',
     category: 'application',
     tags: ['css', 'html5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress']
   },
   {
   	index: 7,
-    thumb : 'images/portfolio-2.png',
+    thumb : 'images/thumb8.jpg',
     image : 'images/portfolio-2.png',
     title : 'Chris Bell Dental',
     description : 'Custom WordPress theme development, copywriting and SEO implementation',
-    link: 'https://julie-lewis.github.io/techdegree-project-1/',
+    link: 'https://belldental.co.nz/',
     category: 'application',
-    tags: ['css', 'html5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress']
+    tags: ['css', 'html5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress', 'Logo Development']
   },
   {
   	index: 8,
-    thumb : 'images/portfolio-2.png',
+    thumb : 'images/thumb9.jpg',
     image : 'images/portfolio-2.png',
     title : 'Te Taumata',
     description : 'Custom WordPress theme development',
-    link: 'https://julie-lewis.github.io/techdegree-project-1/',
+    link: 'http://wordpress-158078-456862.cloudwaysapps.com/',
     category: 'application',
     tags: ['css', 'html5', 'JavaScript', 'UX', 'WordPress']
   }
@@ -126,15 +126,15 @@ const project = [
   // ********************************************
   function setOverlay(project) {     
  		
- 		console.log(project)
+ 		console.log(project.index);
 
 	    let overlay = $('#overlay-content');
 
-	    let overlayDiv = '<div id="overlay"><span id="close" class="close">&times;</span>';
-	    overlayDiv += '<a href=" ' + project.link + ' " target="_blank"><img class="avatar"  data-index="' + project.index + '" src="' + project.image + ' " alt=" ' + project.title + ' "></a>';
+	    let overlayDiv = '<div id="overlay" ><span id="close" class="close">&times;</span>';
+	    overlayDiv += '<a href=" ' + project.link + ' " target="_blank" data-index="' + project.index + '"><img class="avatar" src="' + project.image + ' " alt=" ' + project.title + ' "></a>';
 	    overlayDiv += '<h3 class="overlay-title">' + project.title + '</h3>';
 	    overlayDiv += '<p class="overlay-description">'+ project.description + '</p>';
-	    overlayDiv += '<p class="project-tags">Skills Used: ' +  project.tags.join(', ')  + '<p>';
+	    //overlayDiv += '<p class="project-tags">Skills Used: ' +  project.tags.join(', ')  + '<p>';
 	    overlayDiv += '<hr class="hr">';
 	    overlayDiv += '<a href=" ' + project.link + ' " target="_blank" class="overlay-link">View Project</p>';
 	    overlayDiv += '</div>';
