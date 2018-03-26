@@ -10,7 +10,7 @@ const project = [
     thumb : 'images/thumb1.jpg',
     image : 'images/full-img1.jpg',
     title : 'Styled Sign Up Form',
-    description : 'Styled Sign Up Form',
+    description : 'Used HTML5 and CSS to create and style an E-newsletter Sign Up form to match a prescribed mock up and comply with valid markup.',
     link: 'https://julie-lewis.github.io/techdegree-project-3/',
     category: 'form',
     tags: ['CSS', 'html5']
@@ -20,7 +20,7 @@ const project = [
     thumb : 'images/thumb2.jpg',
     image : 'images/full-img2.jpg',
     title : 'SVG Animations',
-    description : 'SVG Animations',
+    description : 'Utilised and styled SVG icons to produce animation effects on a provided design brief.',
     link: 'https://julie-lewis.github.io/techdegree-project-8/',
     category: 'form',
     tags: ['CSS', 'HTML5', 'SVG Assets', 'Animation']
@@ -30,7 +30,7 @@ const project = [
     thumb : 'images/thumb3.jpg',
     image : 'images/full-img3.jpg',
     title : 'SASS Style Guide',
-    description : 'SASS Style Guide',
+    description : 'Created a flexible, digital Style Guide using SASS syntax and a structured file system.',
     link: 'https://julie-lewis.github.io/techdegree-project-5/',
     category: 'form',
     tags: ['SASS', 'HTML5']
@@ -39,8 +39,8 @@ const project = [
   	index: 3,
     thumb : 'images/thumb4.jpg',
     image : 'images/full-img4.jpg',
-    title : 'JavaScript Guessing Game',
-    description : 'Wheel of Success',
+    title : 'Wheel of Success',
+    description : 'Create a JavaScript Guessing Game, where the user is prompted to guess letters in a phrase.  The user receives feedback on progress and messages regarding their success or failure.',
     link: 'https://julie-lewis.github.io/techdegree-project-7/',
     category: 'function',
     tags: ['CSS', 'HTML5', 'JavaScript']
@@ -50,7 +50,7 @@ const project = [
     thumb : 'images/thumb5.jpg',
     image : 'images/full-img5.jpg',
     title : 'Employee Directory',
-    description : 'Accessed RandomUserGenerator API to create Employee Directory',
+    description : 'Accessed RandomUserGenerator API to create a dynamic, searchable Employee Directory.',
     link: 'https://julie-lewis.github.io/techdegree-project-10/',
     category: 'function',
     tags: ['CSS', 'HTML5', 'JavaScript']
@@ -60,7 +60,7 @@ const project = [
     thumb : 'images/thumb6.jpg',
     image : 'images/full-img6.jpg',
     title : 'REACT Flickr Gallery',
-    description : 'Used Flickr API to develop a searchable Gallery using the REACT.js library',
+    description : 'Used the Flickr API to develop a searchable Gallery using the REACT.js library.',
     link: 'https://julie-lewis.github.io/techdegree-project-11/',
     category: 'function',
     tags: ['CSS', 'HTML5', 'JavaScript', 'REACT']
@@ -70,30 +70,30 @@ const project = [
     thumb : 'images/thumb7.jpg',
     image : 'images/full-img7.jpg',
     title : 'Dubzz Digital Marketing',
-    description : 'Worked with a team to design, develop and implement a re-designed company website',
+    description : 'Worked with a team to design, develop and implement a re-designed and restructured company website.',
     link: 'https://dubzz.co.nz/',
     category: 'application',
-    tags: ['SASS', 'HTML5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress']
+    tags: ['SASS', 'HTML5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress', 'PHP']
   },
   {
   	index: 7,
     thumb : 'images/thumb8.jpg',
     image : 'images/full-img8.jpg',
     title : 'Chris Bell Dental',
-    description : 'Custom WordPress theme development, copywriting and SEO implementation',
+    description : 'New website development, including custom WordPress theme development, copywriting and SEO implementation',
     link: 'https://belldental.co.nz/',
     category: 'application',
-    tags: ['SASS', 'HTML5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress', 'Logo Development']
+    tags: ['SASS', 'HTML5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress', 'Logo Development', 'PHP']
   },
   {
   	index: 8,
     thumb : 'images/thumb9.jpg',
     image : 'images/full-img9.jpg',
     title : 'Te Taumata',
-    description : 'Custom WordPress theme development',
+    description : 'New website development, including a custom WordPress theme, SASS systax and component file structure, and jQuery effects.',
     link: 'http://wordpress-158078-456862.cloudwaysapps.com/',
     category: 'application',
-    tags: ['SASS', 'HTML5', 'JavaScript', 'UX', 'WordPress']
+    tags: ['SASS', 'HTML5', 'JavaScript', 'jQuery', 'UX', 'WordPress', 'PHP']
   }
 ];
 
