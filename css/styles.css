@@ -22,14 +22,14 @@ h1 {
 
 h2 {
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1rem;
   font-family: 'Amaranth', sans-serif;
 }
 
 h3 {
   font-weight: normal;
   font-family: 'Amaranth', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 
 p {
@@ -62,7 +62,7 @@ header {
   padding: 0px;
   margin-top: 14px;
   margin-bottom: 0px;
-  line-height: 1.2em;
+  line-height: 1.2rem;
 }
 
 .main-nav {
@@ -116,12 +116,16 @@ header {
   transition: all .5s;
 }
 
-  main {
-    padding-top: 20px;
-    background: #fff;
-  }
+/*************
+PORTFOLIO
+*************/
 
-.card {
+main {
+  padding-top: 20px;
+  background: #fff;
+}
+
+.single-project {
   margin: 5% auto;
   padding: 10px;
   max-width: 500px;
@@ -133,16 +137,16 @@ header {
   height: auto;
 }
 
-#portfolio {
+#portfolio-wrap {
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#portfolio h2 {
+#portfolio-wrap h2 {
   flex-basis: 100%;
 }
 
-#portfolio .card {
+#portfolio-wrap .single-project {
   flex-basis: 100%;
 }
 
@@ -162,7 +166,7 @@ MODAL POP UPS
   display: none;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 2em; 
+  padding-top: 2rem; 
   overflow: auto;
 }
 
@@ -171,15 +175,15 @@ MODAL POP UPS
 }*/
 
 #overlay-content {
-  width: 30%;
-  min-width: 350px;
+  width: 80%;
+  min-width: 300px;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 50px rgba(10, 10, 10, 0.5);
   opacity: 1; 
   text-align: center;
-  margin: 50px auto 2em;
+  margin: 50px auto 2rem;
 }
 
 #overlay  {
@@ -187,7 +191,7 @@ MODAL POP UPS
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  min-width: 350px;
+  min-width: 300px;
   padding: 30px 50px 80px 50px;
   text-align: center;
 }
@@ -201,12 +205,12 @@ MODAL POP UPS
 
 #overlay p {
   margin: 5px;
-  font-size: 1em;
-  line-height: 1.7em;
+  font-size: 1rem;
+  line-height: 1.7rem;
 }
 
 #overlay .employee-name {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   margin: 10px;
 }
 
@@ -228,20 +232,20 @@ MODAL POP UPS
 }
 
 #overlay .avatar {
-  max-width: 150px;
+  width: 100%;
   height: auto;
-  border-radius: 50%;
   margin: auto;
 }
 
 #next, #previous {
-  color: #fff;
+  color: #ccc;
   font-size: 60px;
   font-weight: 700;
   position: absolute;
   top: 50%;
   opacity: .5;
   transition: opacity .5s;
+  z-index: 100;
 }
 
 #next:hover, #previous:hover {
@@ -250,11 +254,11 @@ MODAL POP UPS
 }
 
 #next{
-  left: 75%;
+  left: 85%;
 }
 
 #previous{
-  left: 25%;
+  right: 85%;
 }
 
 /*****************
@@ -276,10 +280,10 @@ footer {
 }
 
 footer p {
-  margin: 1em auto;
+  margin: 1rem auto;
 }
 
-.phone a, .email a {
+footer a {
   color: #999;
   font-weight: bold;
 }
@@ -337,7 +341,7 @@ Styles for tablets
 
 @media screen and (min-width: 768px) {
 
-  .profile, #portfolio, .main-nav {
+  .profile, #portfolio-wrap, .main-nav {
     padding: 3% 5%;
   }
   
@@ -376,34 +380,45 @@ Styles for tablets
   }
 
   main p {
-    line-height: 1.6em;
+    line-height: 1.6rem;
   }
 
-  #portfolio h2 {
+  #portfolio-wrap h2 {
     margin-bottom: 40px;
   }
 
-  #portfolio .card {
+  #portfolio-wrap .single-project {
   flex-basis: 50%;
   margin: 0;
   }
 
-  .skills {
-    width: 60%;
-    margin-bottom: 30px;
+  #overlay-content {
+    width: 70%;
   }
 
   header, footer {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
   .top-nav {
     display: none;
   }
   
+  #next, #previous {
+  color: #fff;
+  } 
+
+  #next{
+  left: 90%;
+  }
+
+  #previous{
+    right: 90%;
+  }
+
   footer p {
   max-width: 60%;
-  margin: 1em auto;
+  margin: 1rem auto;
   }
 
   .foot-nav .big-nav {
@@ -435,11 +450,15 @@ Styles for desktop
     padding: 0;
   }
 
-  .profile, #portfolio, .main-nav {
+  .profile, #portfolio-wrap, .main-nav {
     padding: 3% 0%;
   }
   
-  #portfolio .card {
+  #portfolio-wrap .single-project {
   flex-basis: 30%;
+  }
+
+  #overlay-content {
+    width: 60%;
   }
 }

@@ -1,5 +1,12 @@
+$(document).ready(()=>{
+
+// ********************************************
+// VARIABLES
+// ********************************************
+
 const project = [
   {
+  	index: 0,
     thumb : 'images/portfolio-1.png',
     image : 'images/portfolio-1.png',
     title : 'Styled Sign Up Form',
@@ -9,6 +16,7 @@ const project = [
     tags: ['css', 'html5']
   },
   {
+  	index: 1,
     thumb : 'images/portfolio-2.png',
     image : 'images/portfolio-2.png',
     title : 'SVG Animations',
@@ -18,6 +26,7 @@ const project = [
     tags: ['css', 'html5', 'SVG Assets', 'Animation']
   },
   {
+  	index: 2,
     thumb : 'images/portfolio-3.png',
     image : 'images/portfolio-3.png',
     title : 'SASS Style Guide',
@@ -27,6 +36,7 @@ const project = [
     tags: ['sass', 'html5']
   },
   {
+  	index: 3,
     thumb : 'images/portfolio-4.png',
     image : 'images/portfolio-4.png',
     title : 'JavaScript Guessing Game',
@@ -36,6 +46,7 @@ const project = [
     tags: ['css', 'html5', 'JavaScript']
   },
   {
+  	index: 4,
     thumb : 'images/portfolio-5.png',
     image : 'images/portfolio-5.png',
     title : 'Employee Directory',
@@ -45,6 +56,7 @@ const project = [
     tags: ['css', 'html5', 'JavaScript']
   },
   {
+  	index: 5,
     thumb : 'images/portfolio-6.png',
     image : 'images/portfolio-6.png',
     title : 'REACT Flickr Gallery',
@@ -54,6 +66,7 @@ const project = [
     tags: ['css', 'html5', 'JavaScript', 'REACT']
   },
   {
+  	index: 6,
     thumb : 'images/portfolio-1.png',
     image : 'images/portfolio-1.png',
     title : 'Dubzz Digital Marketing',
@@ -63,6 +76,7 @@ const project = [
     tags: ['css', 'html5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress']
   },
   {
+  	index: 7,
     thumb : 'images/portfolio-2.png',
     image : 'images/portfolio-2.png',
     title : 'Chris Bell Dental',
@@ -72,6 +86,7 @@ const project = [
     tags: ['css', 'html5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress']
   },
   {
+  	index: 8,
     thumb : 'images/portfolio-2.png',
     image : 'images/portfolio-2.png',
     title : 'Te Taumata',
@@ -82,106 +97,66 @@ const project = [
   }
 ];
 
-
-
-$(document).ready(()=>{
-  // ********************************************
-  // VARIABLES
-  // ********************************************
-  const formWrap = document.getElementById('form');
-  const functionWrap = document.getElementById('function');
-  const applicationWrap = document.getElementById('application');
-  const overlayWrap = document.getElementById('overlay-wrapper');
+  	const portfolioWrap = document.getElementById('portfolio-wrap');
+  	const overlayWrap = document.getElementById('overlay-wrapper');
 
   // ********************************************
-  // SET EMPLOYEE DIV CONTENT
+  // SET PROJECT DIV CONTENT & DEFINE MODAL CONTENT
   // ********************************************
-  function setSingleProject(projectCategory) {
-  	// runs through project array
+  function setSingleProject(project) {
+
   	for (let i = 0; i < project.length; i++) {
-  		//if category = projectCategory
 
- 		// let project
+	    let projectDiv = '<div class="single-project" data-index="'+ i +'">';
 
-	    let projectDiv = '<div class="single-project" data-index="'+project[i]+'">';
-
-	    projectDiv += '<img class="project-image" data-index="' + project[i] + '" src="' + project.thumb + ' " alt=" ' + project.title + ' ">';
-	    projectDiv += '<div data-index="'+ project[i] +'">';
-	    projectDiv += '<h3 class="employee-name" data-index="'+ project[i] +'">' +  project.title  + '</h3>';
+	    projectDiv += '<img class="full-img" data-index="' + i + '" src="' + project[i].thumb + ' " alt=" ' + project[i].title + ' ">';
+	    projectDiv += '<div data-index="'+ i +'">';
+	    projectDiv += '<h3 class="project-title" data-index="'+ i +'">' +  project[i].title  + '</h3>';
 	    projectDiv += '</div></div>';
 
-	    // push to an array? return category?
-	    
+	    $("#portfolio-wrap").append(projectDiv);
+
 	}
-  }
+  };
 
-  function appendProjects() => {
-    // for each item in array
-  		if category = form {
-  			// $(formWrap).append(projectDiv);
-  		}
-  		else if category = functional {
-  			// $(functionWrap).append(projectDiv);
-  		} else if category = application {
-  			// $(applicationWrap).append(projectDiv);
-  		} else {
-  			console.log('whoops!')
-  		}
-}
-
-
-  // USER SEARCH - USE FOR CAT FILTER?
-  const userSearch = document.querySelector("input[id='user-search']");
-  $(userSearch).keyup(function(){
-    // Retrieve the input field text 
-    var filter = $(this).val();
-    // Loop through the employee div 
-    $(".avatar").each(function(){
-        var employeeName = $(this).attr('alt').search(new RegExp(filter, "i"));
-        if (employeeName < 0) {  
-            $(this).parent().fadeOut();
-        // Show the div item if the phrase matches 
-        } else {
-            $(this).parent().show();
-        }
-    });
-  });
-
-
+  setSingleProject(project);
 
   // ********************************************
   // DEFINE MODAL CONTENT
   // ********************************************
-  function setOverlay(employee) {       
-    let overlay = $('#overlay-content');
+  function setOverlay(project) {     
+ 		
+ 		console.log(project)
 
-    let overlayDiv = '<div id="overlay"><span id="close" class="close">&times;</span>';
-    overlayDiv += '<img class="avatar" data-index="' + employee.index + '" src="' + employee.img + ' " alt=" ' + employee.name + ' ' + employee.userName + ' ">';
-    overlayDiv += '<p class="employee-name">' + employee.name + '</p>';
-    overlayDiv += '<p class="overlay-email">'+ employee.userName + '</p>';
-    overlayDiv += '<p class="overlay-email">'+ employee.email + '</p>';
-    overlayDiv += '<hr class="hr">';
-    overlayDiv += '<p class="overlay-cell">'+ employee.cell + '</p>';
-    overlayDiv += '<p class="overlay-address">'+ employee.address+ '</p>';
-    overlayDiv += '<p class="overlay-dob">'+ employee.bday + '</p>';
-    overlayDiv += '</div>';
+	    let overlay = $('#overlay-content');
 
-    overlay.html(overlayDiv);
+	    let overlayDiv = '<div id="overlay"><span id="close" class="close">&times;</span>';
+	    overlayDiv += '<a href=" ' + project.link + ' " target="_blank"><img class="avatar"  data-index="' + project.index + '" src="' + project.image + ' " alt=" ' + project.title + ' "></a>';
+	    overlayDiv += '<h3 class="overlay-title">' + project.title + '</h3>';
+	    overlayDiv += '<p class="overlay-description">'+ project.description + '</p>';
+	    overlayDiv += '<p class="project-tags">Skills Used: ' +  project.tags.join(', ')  + '<p>';
+	    overlayDiv += '<hr class="hr">';
+	    overlayDiv += '<a href=" ' + project.link + ' " target="_blank" class="overlay-link">View Project</p>';
+	    overlayDiv += '</div>';
+
+    	overlay.html(overlayDiv);
+
   } //end setOverlay
 
 
   // ********************************************
   // OPEN MODAL ON CLICK
   // ********************************************
-  $(employeeWrap).on('click', '.employee', e => { // Delegated event handler so that margins don't open undefined
+  $("#portfolio-wrap").on('click', '.single-project', e => { // Delegated event handler so that margins don't open undefined
     overlayWrap.style.display = "block";
     let selected = e.target; // Gets clicked item
     let selectedIndex = $(selected).data('index'); //Indentifies index of clicked on node
-    setOverlay(employeeInfo[selectedIndex]);
+    setOverlay(project[selectedIndex]);
   });
-  // ********************************************
-  // MODAL CONTROLS
-  // ********************************************
+
+  // // ********************************************
+  // // MODAL CONTROLS
+  // // ********************************************
   // Close modal by clicking X
   $('#overlay-wrapper').on('click', '#close', e=> { // Delegated event handler to existing DOM element
     $('#overlay').text('');
@@ -198,34 +173,31 @@ $(document).ready(()=>{
     }    
   };
 
-  //Make arrows navigate to/show previous/next employee
+  // //Make arrows navigate to/show previous/next Project
   const previous = document.getElementById('previous');
   const next = document.getElementById('next');
   previous.onclick = function() {
     let currentIndex = document.getElementById('close').nextSibling.getAttribute('data-index');
-    let previousEmployee = Number(currentIndex) - 1;
-    let lastEmployee = Number(currentIndex) + 11;
+    let previousProject = Number(currentIndex) - 1;
+    let lastProject = Number(currentIndex) + 8;
     if (currentIndex == 0) {
-      setOverlay(employeeInfo[ lastEmployee ]);
+      setOverlay(project[ lastProject ]);
     }
     else { 
-      setOverlay(employeeInfo[ previousEmployee ]);
+      setOverlay(project[ previousProject ]);
     }
   };
   next.onclick = function() {
     let currentIndex = document.getElementById('close').nextSibling.getAttribute('data-index');
-    let nextEmployee = Number(currentIndex) + 1;
-    let firstEmployee = Number(currentIndex) - 11;
-    if (currentIndex > 10) {
-      setOverlay(employeeInfo[ firstEmployee ]);
+    let nextProject = Number(currentIndex) + 1;
+    let firstProject = Number(currentIndex) - 8;
+    if (currentIndex > 7) {
+      setOverlay(project[ firstProject ]);
     }
     else { 
-      setOverlay(employeeInfo[ nextEmployee ]);
+      setOverlay(project[ nextProject ]);
     }
   };
-
-
-
 
 
 }); //end document. ready
