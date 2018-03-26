@@ -8,92 +8,92 @@ const project = [
   {
   	index: 0,
     thumb : 'images/thumb1.jpg',
-    image : 'images/portfolio-1.png',
+    image : 'images/full-img1.jpg',
     title : 'Styled Sign Up Form',
     description : 'Styled Sign Up Form',
     link: 'https://julie-lewis.github.io/techdegree-project-3/',
     category: 'form',
-    tags: ['css', 'html5']
+    tags: ['CSS', 'html5']
   },
   {
   	index: 1,
     thumb : 'images/thumb2.jpg',
-    image : 'images/portfolio-2.png',
+    image : 'images/full-img2.jpg',
     title : 'SVG Animations',
     description : 'SVG Animations',
     link: 'https://julie-lewis.github.io/techdegree-project-8/',
     category: 'form',
-    tags: ['css', 'html5', 'SVG Assets', 'Animation']
+    tags: ['CSS', 'HTML5', 'SVG Assets', 'Animation']
   },
   {
   	index: 2,
     thumb : 'images/thumb3.jpg',
-    image : 'images/portfolio-3.png',
+    image : 'images/full-img3.jpg',
     title : 'SASS Style Guide',
     description : 'SASS Style Guide',
     link: 'https://julie-lewis.github.io/techdegree-project-5/',
     category: 'form',
-    tags: ['sass', 'html5']
+    tags: ['SASS', 'HTML5']
   },
   {
   	index: 3,
     thumb : 'images/thumb4.jpg',
-    image : 'images/portfolio-4.png',
+    image : 'images/full-img4.jpg',
     title : 'JavaScript Guessing Game',
     description : 'Wheel of Success',
     link: 'https://julie-lewis.github.io/techdegree-project-7/',
     category: 'function',
-    tags: ['css', 'html5', 'JavaScript']
+    tags: ['CSS', 'HTML5', 'JavaScript']
   },
   {
   	index: 4,
     thumb : 'images/thumb5.jpg',
-    image : 'images/portfolio-5.png',
+    image : 'images/full-img5.jpg',
     title : 'Employee Directory',
     description : 'Accessed RandomUserGenerator API to create Employee Directory',
     link: 'https://julie-lewis.github.io/techdegree-project-10/',
     category: 'function',
-    tags: ['css', 'html5', 'JavaScript']
+    tags: ['CSS', 'HTML5', 'JavaScript']
   },
   {
   	index: 5,
     thumb : 'images/thumb6.jpg',
-    image : 'images/portfolio-6.png',
+    image : 'images/full-img6.jpg',
     title : 'REACT Flickr Gallery',
     description : 'Used Flickr API to develop a searchable Gallery using the REACT.js library',
     link: 'https://julie-lewis.github.io/techdegree-project-11/',
     category: 'function',
-    tags: ['css', 'html5', 'JavaScript', 'REACT']
+    tags: ['CSS', 'HTML5', 'JavaScript', 'REACT']
   },
   {
   	index: 6,
     thumb : 'images/thumb7.jpg',
-    image : 'images/portfolio-1.png',
+    image : 'images/full-img7.jpg',
     title : 'Dubzz Digital Marketing',
     description : 'Worked with a team to design, develop and implement a re-designed company website',
     link: 'https://dubzz.co.nz/',
     category: 'application',
-    tags: ['css', 'html5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress']
+    tags: ['SASS', 'HTML5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress']
   },
   {
   	index: 7,
     thumb : 'images/thumb8.jpg',
-    image : 'images/portfolio-2.png',
+    image : 'images/full-img8.jpg',
     title : 'Chris Bell Dental',
     description : 'Custom WordPress theme development, copywriting and SEO implementation',
     link: 'https://belldental.co.nz/',
     category: 'application',
-    tags: ['css', 'html5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress', 'Logo Development']
+    tags: ['SASS', 'HTML5', 'JavaScript', 'Copywriting', 'UX', 'SEO', 'WordPress', 'Logo Development']
   },
   {
   	index: 8,
     thumb : 'images/thumb9.jpg',
-    image : 'images/portfolio-2.png',
+    image : 'images/full-img9.jpg',
     title : 'Te Taumata',
     description : 'Custom WordPress theme development',
     link: 'http://wordpress-158078-456862.cloudwaysapps.com/',
     category: 'application',
-    tags: ['css', 'html5', 'JavaScript', 'UX', 'WordPress']
+    tags: ['SASS', 'HTML5', 'JavaScript', 'UX', 'WordPress']
   }
 ];
 
@@ -134,7 +134,7 @@ const project = [
 	    overlayDiv += '<a href=" ' + project.link + ' " target="_blank" data-index="' + project.index + '"><img class="avatar" src="' + project.image + ' " alt=" ' + project.title + ' "></a>';
 	    overlayDiv += '<h3 class="overlay-title">' + project.title + '</h3>';
 	    overlayDiv += '<p class="overlay-description">'+ project.description + '</p>';
-	    //overlayDiv += '<p class="project-tags">Skills Used: ' +  project.tags.join(', ')  + '<p>';
+	    overlayDiv += '<h2 class="project-tags"><strong>Skills Used:</strong> ' +  project.tags.join(', ')  + '</h2>';
 	    overlayDiv += '<hr class="hr">';
 	    overlayDiv += '<a href=" ' + project.link + ' " target="_blank" class="overlay-link">View Project</p>';
 	    overlayDiv += '</div>';
